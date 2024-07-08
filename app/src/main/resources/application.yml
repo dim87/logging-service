@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: logging
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "health"
