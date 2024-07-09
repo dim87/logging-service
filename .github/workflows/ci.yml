@@ -13,9 +13,12 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
-          
+
+      - name: Change to app directory
+        run: cd app
+
       - name: Maven package
-        run: mvn -B package --file pom.xml
+        run: mvn -B package --file app/pom.xml
         
       - name: Maven test
-        run: mvn test
+        run: mvn test --file app/pom.xml
