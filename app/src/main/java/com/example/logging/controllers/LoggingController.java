@@ -1,7 +1,7 @@
-package com.example.logging.domain.logging;
+package com.example.logging.controllers;
 
-import com.example.logging.domain.logging.save.SaveStructuredLogRequest;
-import com.example.logging.domain.utils.GenericResponse;
+import com.example.logging.domain.logrecords.save.SaveStructuredLogRequest;
+import com.example.logging.utils.GenericResponse;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.PutMapping;

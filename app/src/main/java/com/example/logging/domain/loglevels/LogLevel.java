@@ -1,4 +1,4 @@
-package com.example.logging.domain.logging;
+package com.example.logging.domain.loglevels;
 
 public enum LogLevel {
 

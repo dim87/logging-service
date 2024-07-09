@@ -1,13 +1,12 @@
-package com.example.logging.domain.logging.save;
+package com.example.logging.domain.logrecords.save;
 
-import com.example.logging.domain.logging.LogLevel;
-import java.util.UUID;
+import com.example.logging.domain.loglevels.LogLevel;
 
 public record SaveStructuredLogRequest(
-    UUID id,
-    String applicationId,
     long timestamp,
     LogLevel level,
+    String applicationCode,
+    String revision,
     String thread,
     String file,
     int line,
