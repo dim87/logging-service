@@ -2,6 +2,9 @@ spring:
   application:
     name: logging
 
+  main:
+    banner-mode: "off"
+
 management:
   endpoints:
     web:
