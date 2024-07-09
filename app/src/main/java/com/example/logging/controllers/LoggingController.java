@@ -4,6 +4,7 @@ import com.example.logging.domain.logrecords.save.SaveStructuredLogRequest;
 import com.example.logging.utils.GenericResponse;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class LoggingController {
 
   @PutMapping("/structured")
-  public GenericResponse<Void> saveStructuredLogEntry(@RequestBody SaveStructuredLogRequest request) {
+  public GenericResponse<Void> saveStructuredLogEntry(@Validated @RequestBody SaveStructuredLogRequest request) {
     log.info(request.toString());
     return GenericResponse.success();
   }
