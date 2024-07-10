@@ -1,6 +1,5 @@
-package com.example.logging.domain.logrecords.save;
+package com.example.logging.domain.logrecords.requests;
 
-import com.example.logging.domain.loglevels.LogLevel;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;

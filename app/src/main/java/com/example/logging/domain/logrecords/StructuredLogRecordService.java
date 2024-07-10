@@ -3,7 +3,7 @@ package com.example.logging.domain.logrecords;
 import com.example.logging.domain.applications.ApplicationService;
 import com.example.logging.domain.loglevels.LogLevel;
 import com.example.logging.domain.loglevels.LogLevelService;
-import com.example.logging.domain.logrecords.save.SaveStructuredLogRequest;
+import com.example.logging.domain.logrecords.requests.SaveStructuredLogRequest;
 import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.ZoneId;

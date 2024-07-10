@@ -2,7 +2,7 @@ package com.example.logging.controllers;
 
 import com.example.logging.domain.logrecords.LogRecordData;
 import com.example.logging.domain.logrecords.StructuredLogRecordService;
-import com.example.logging.domain.logrecords.save.SaveStructuredLogRequest;
+import com.example.logging.domain.logrecords.requests.SaveStructuredLogRequest;
 import com.example.logging.utils.GenericResponse;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

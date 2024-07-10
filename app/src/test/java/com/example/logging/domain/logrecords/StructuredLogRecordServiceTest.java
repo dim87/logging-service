@@ -3,7 +3,7 @@ package com.example.logging.domain.logrecords;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import com.example.logging.domain.loglevels.LogLevel;
-import com.example.logging.domain.logrecords.save.SaveStructuredLogRequest;
+import com.example.logging.domain.logrecords.requests.SaveStructuredLogRequest;
 import lombok.val;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
