@@ -18,7 +18,7 @@ class LogRecordEntity {
   private UUID id;
 
   private LocalDateTime timestamp;
-  private long levelId;
+  private Long levelId;
   private Long applicationId;
   private String revision;
   private String thread;

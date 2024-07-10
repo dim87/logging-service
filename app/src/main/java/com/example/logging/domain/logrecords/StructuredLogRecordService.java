@@ -2,6 +2,7 @@ package com.example.logging.domain.logrecords;
 
 import com.example.logging.domain.applications.ApplicationService;
 import com.example.logging.domain.loglevels.LogLevel;
+import com.example.logging.domain.loglevels.LogLevelService;
 import com.example.logging.domain.logrecords.save.SaveStructuredLogRequest;
 import java.time.Instant;
 import java.time.LocalDateTime;
@@ -21,6 +22,7 @@ import org.springframework.validation.annotation.Validated;
 public class StructuredLogRecordService {
 
   private final ApplicationService applicationService;
+  private final LogLevelService logLevelService;
   private final LogRecordRepository logRecordRepository;
 
   private final ModelMapper modelMapper;
@@ -30,10 +32,11 @@ public class StructuredLogRecordService {
 
     val application = applicationService.getOrCreate(request.applicationCode());
     val dateTime = getLocalDateTime(request.timestamp());
+    val level = logLevelService.require(request.level());
 
     val logRecord = new LogRecordEntity();
     logRecord.setTimestamp(dateTime);
-    logRecord.setLevelId(1L);
+    logRecord.setLevelId(level.getId());
     logRecord.setApplicationId(application.getId());
     logRecord.setRevision(request.revision());
     logRecord.setThread(request.thread());
@@ -44,7 +47,7 @@ public class StructuredLogRecordService {
 
     logRecordRepository.save(logRecord);
 
-    return mapEntity(logRecord, LogLevel.DEBUG, application.getCode());
+    return mapEntity(logRecord, LogLevel.from(level.getCode()), application.getCode());
   }
 
   private LogRecordData mapEntity(@NonNull LogRecordEntity entity, @NonNull LogLevel level,
@@ -55,7 +58,7 @@ public class StructuredLogRecordService {
     return mapped;
   }
 
-  private LocalDateTime getLocalDateTime(long timestamp) {
+  LocalDateTime getLocalDateTime(long timestamp) {
     return LocalDateTime.ofInstant(Instant.ofEpochMilli(timestamp),
         ZoneId.systemDefault());
   }
