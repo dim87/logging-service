@@ -8,7 +8,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import lombok.val;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,7 +21,7 @@ public class LoggingController {
 
   private final StructuredLogRecordService structuredLogRecordService;
 
-  @PutMapping("/structured")
+  @PostMapping("/structured")
   public GenericResponse<LogRecordData> saveStructuredLogEntry(
       @Validated @RequestBody SaveStructuredLogRequest request) {
 
@@ -29,7 +29,7 @@ public class LoggingController {
     return GenericResponse.success(id);
   }
 
-  @PutMapping()
+  @PostMapping()
   public GenericResponse<Void> saveStructuredLogEntry(@RequestBody String logMessage) {
     log.info(logMessage);
     return GenericResponse.failure("Not yet implemented");
