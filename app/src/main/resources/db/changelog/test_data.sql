@@ -1,6 +1,6 @@
-insert into applications (id, code, title)
-values (1, 'logging-service', 'application #1'),
-       (2, 'api-service', 'application #2');
+insert into applications (id, code)
+values (1, 'logging-service'),
+       (2, 'api-service');
 
 
 INSERT
