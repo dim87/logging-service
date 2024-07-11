@@ -1,5 +1,6 @@
 package com.example.logging.domain.loglevels;
 
+import java.util.List;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -18,14 +19,17 @@ public class LogLevelService {
 
   @Transactional(readOnly = true)
   public LogLevelData require(@NonNull String code) {
-    return logLevelRepository.getByCode(code)
-        .map(this::mapEntity)
-        .orElseThrow(
-            () -> new DataRetrievalFailureException(
-                String.format("Log level not found for code: %s", code)));
+    return logLevelRepository.getByCode(code).map(this::mapEntity).orElseThrow(
+        () -> new DataRetrievalFailureException(
+            String.format("Log level not found for code: %s", code)));
   }
 
   private LogLevelData mapEntity(@NonNull LogLevelEntity entity) {
     return modelMapper.map(entity, LogLevelData.class);
+  }
+
+  @Transactional(readOnly = true)
+  public List<LogLevelData> findAll() {
+    return logLevelRepository.findAll().stream().map(this::mapEntity).toList();
   }
 }
