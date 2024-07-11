@@ -1,5 +1,6 @@
 package com.example.logging.domain.applications;
 
+import java.util.List;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -32,5 +33,10 @@ public class ApplicationService {
 
   private ApplicationData mapEntity(@NonNull ApplicationEntity entity) {
     return modelMapper.map(entity, ApplicationData.class);
+  }
+
+  @Transactional(readOnly = true)
+  public List<ApplicationData> findAll() {
+    return applicationRepository.findAll().stream().map(this::mapEntity).toList();
   }
 }

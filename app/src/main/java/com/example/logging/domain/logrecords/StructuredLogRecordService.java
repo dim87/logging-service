@@ -7,11 +7,9 @@ import com.example.logging.domain.logrecords.requests.SaveStructuredLogRequest;
 import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
-import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import lombok.val;
-import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.validation.annotation.Validated;
@@ -24,8 +22,8 @@ public class StructuredLogRecordService {
   private final ApplicationService applicationService;
   private final LogLevelService logLevelService;
   private final LogRecordRepository logRecordRepository;
+  private final LogRecordMapperService logRecordMapperService;
 
-  private final ModelMapper modelMapper;
 
   @Transactional
   public LogRecordData save(@Validated SaveStructuredLogRequest request) {
@@ -47,16 +45,10 @@ public class StructuredLogRecordService {
 
     logRecordRepository.save(logRecord);
 
-    return mapEntity(logRecord, LogLevel.from(level.getCode()), application.getCode());
+    return logRecordMapperService.map(logRecord, LogLevel.from(level.getCode()),
+        application.getCode());
   }
 
-  private LogRecordData mapEntity(@NonNull LogRecordEntity entity, @NonNull LogLevel level,
-      @NonNull String applicationCode) {
-    val mapped = modelMapper.map(entity, LogRecordData.class);
-    mapped.setApplicationCode(applicationCode);
-    mapped.setLevel(level);
-    return mapped;
-  }
 
   LocalDateTime getLocalDateTime(long timestamp) {
     return LocalDateTime.ofInstant(Instant.ofEpochMilli(timestamp),
