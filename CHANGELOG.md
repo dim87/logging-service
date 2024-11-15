@@ -1,5 +1,19 @@
 # Changelog
 
+## [2.0.0](https://github.com/dim87/logging-service/compare/v1.2.0...v2.0.0) (2024-11-15)
+
+
+### ⚠ BREAKING CHANGES
+
+* a new feature 5 ([#35](https://github.com/dim87/logging-service/issues/35))
+
+### Features
+
+* a new feature 3 ([#31](https://github.com/dim87/logging-service/issues/31)) ([fd67523](https://github.com/dim87/logging-service/commit/fd67523f761030e945407cb223dc2972e7fb0664))
+* a new feature 4 ([#34](https://github.com/dim87/logging-service/issues/34)) ([03b7b8d](https://github.com/dim87/logging-service/commit/03b7b8d9a9f322c79d80fcfcf4ab0ee7a70381f2))
+* a new feature 5 ([#35](https://github.com/dim87/logging-service/issues/35)) ([9543147](https://github.com/dim87/logging-service/commit/954314782ffe4fd7550695a09e6ea00a9d2d2f10))
+* **LGS-001:** a new feature 6 ([#36](https://github.com/dim87/logging-service/issues/36)) ([2902a7b](https://github.com/dim87/logging-service/commit/2902a7b028930576097eda068b7f99a31feafb60))
+
 ## [1.2.0](https://github.com/dim87/logging-service/compare/v1.1.0...v1.2.0) (2024-11-15)
 
 
