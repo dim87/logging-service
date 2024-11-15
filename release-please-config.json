@@ -1,0 +1,14 @@
+{
+  "packages": {
+    ".": {
+      "release-type": "maven",
+      "extra-files": [
+        {
+          "type": "xml",
+          "path": "app/pom.xml",
+          "xpath": "/project/version"
+        }
+      ]
+    }
+  }
+}
