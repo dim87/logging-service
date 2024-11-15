@@ -13,7 +13,7 @@
   <artifactId>loggingservice</artifactId>
   <version>1.0.2-SNAPSHOT</version>
   <name>logging</name>
-  <description>Logging service</description>
+  <description>Logging service 1</description>
   <properties>
     <java.version>17</java.version>
   </properties>
