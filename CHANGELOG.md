@@ -1,5 +1,18 @@
 # Changelog
 
+## [3.0.0](https://github.com/dim87/logging-service/compare/v2.0.0...v3.0.0) (2024-11-15)
+
+
+### ⚠ BREAKING CHANGES
+
+* **LGS-004:** This breaks controller api
+* **LGS-003:** This breaks controller api
+
+### Features
+
+* **LGS-003:** testing commit message ([#38](https://github.com/dim87/logging-service/issues/38)) ([c3eef4b](https://github.com/dim87/logging-service/commit/c3eef4b32feb1c69b45cf7865fe4ad70e1b9ef4e))
+* **LGS-004:** another breaking change ([#39](https://github.com/dim87/logging-service/issues/39)) ([fcddb48](https://github.com/dim87/logging-service/commit/fcddb4806b0e6bd707f3129d94727a4a11d23d9f))
+
 ## [2.0.0](https://github.com/dim87/logging-service/compare/v1.2.0...v2.0.0) (2024-11-15)
 
 
