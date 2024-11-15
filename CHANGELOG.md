@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/dim87/logging-service/compare/v1.0.1...v1.1.0) (2024-11-15)
+
+
+### Features
+
+* a new feature here ([#27](https://github.com/dim87/logging-service/issues/27)) ([bbf21f2](https://github.com/dim87/logging-service/commit/bbf21f283483ee120406553a1ace6f2b81f994c8))
+
 ## [1.0.1](https://github.com/dim87/logging-service/compare/v1.0.0...v1.0.1) (2024-11-15)
 
 
