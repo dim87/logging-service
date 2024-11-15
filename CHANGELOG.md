@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/dim87/logging-service/compare/v1.0.0...v1.0.1) (2024-11-15)
+
+
+### Bug Fixes
+
+* release please configuration ([#25](https://github.com/dim87/logging-service/issues/25)) ([fa8a440](https://github.com/dim87/logging-service/commit/fa8a440e28df78a73d4e0698a909b498b5fd0225))
+
 ## 1.0.0 (2024-11-15)
 
 
