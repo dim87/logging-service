@@ -9,7 +9,7 @@
   </parent>
   <groupId>com.example</groupId>
   <artifactId>loggingservice</artifactId>
-  <version>3.0.1-SNAPSHOT</version>
+  <version>3.1.0</version>
   <name>logging</name>
   <description>Logging service 123</description>
   <properties>
