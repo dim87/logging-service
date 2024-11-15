@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.1.0](https://github.com/dim87/logging-service/compare/v3.0.0...v3.1.0) (2024-11-15)
+
+
+### Features
+
+* **LGS-006:** another feature here ([#43](https://github.com/dim87/logging-service/issues/43)) ([4cf2fd3](https://github.com/dim87/logging-service/commit/4cf2fd3353086ba199c85cfbcc9ae2f0c014d0f4))
+
 ## [3.0.0](https://github.com/dim87/logging-service/compare/v2.0.0...v3.0.0) (2024-11-15)
 
 
